@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+    <title>Registro Cliente</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+    <h:outputStylesheet library="css" name="login.css"/>
+    <style>
+        body {
+            background: url('fondo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contenedor-login {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            width: 450px;
+            margin: 60px auto;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c2c2c;
+            margin-bottom: 25px;
+        }
+
+        .input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .mensaje-error {
+            font-size: 12px;
+            color: #b20000;
+            margin-top: 4px;
+            margin-left: 110px;
+        }
+
+        .boton {
+            width: 100%;
+            padding: 10px;
+            background-color: #f5c518;
+            color: #2c2c2c;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .boton:hover {
+            background-color: #e5b700;
+        }
+
+        .boton-secundario {
+            padding: 8px 85px;
+            background-color: #DECB8A;
+            color: #2c2c2c;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .boton-secundario:hover {
+            background-color: #D0B159;
+        }
+
+        .form-grid {
+            width: 100%;
+            border-spacing: 8px;
+        }
+
+        .form-label {
+            text-align: right;
+            padding-right: 10px;
+            font-weight: bold;
+            color: #444;
+            width: 100px;
+        }
+    </style>
+</h:head>
+
+<h:body>
+    <div class="contenedor-login">
+        <h:form>
+            <h2>Registro de Cliente</h2>
+
+            <table class="form-grid">
+                <tr>
+                    <td class="form-label"><h:outputLabel for="nombre" value="Nombre:"/></td>
+                    <td>
+                        <h:inputText id="nombre" value="#{registroClienteBean.nombre}" required="true"
+                                     requiredMessage="⚠️ Ingresa tu nombre" styleClass="input"/>
+                        <h:message for="nombre" styleClass="mensaje-error"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="form-label"><h:outputLabel for="apellidos" value="Apellidos:"/></td>
+                    <td>
+                        <h:inputText id="apellidos" value="#{registroClienteBean.apellidos}" required="true"
+                                     requiredMessage="⚠️ Ingresa tus apellidos" styleClass="input"/>
+                        <h:message for="apellidos" styleClass="mensaje-error"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="form-label"><h:outputLabel for="dni" value="DNI:"/></td>
+                    <td>
+                        <h:inputText id="dni" value="#{registroClienteBean.dni}" required="true"
+                                     requiredMessage="⚠️ Ingresa tu DNI" styleClass="input"/>
+                        <h:message for="dni" styleClass="mensaje-error"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="form-label"><h:outputLabel for="telefono" value="Teléfono:"/></td>
+                    <td>
+                        <h:inputText id="telefono" value="#{registroClienteBean.telefono}" required="true"
+                                     requiredMessage="⚠️ Ingresa tu teléfono" styleClass="input"/>
+                        <h:message for="telefono" styleClass="mensaje-error"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="form-label"><h:outputLabel for="correo" value="Correo:"/></td>
+                    <td>
+                        <h:inputText id="correo" value="#{registroClienteBean.correo}" required="true"
+                                     requiredMessage="⚠️ Ingresa tu correo" styleClass="input"/>
+                        <h:message for="correo" styleClass="mensaje-error"/>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="form-label"><h:outputLabel for="contraseña" value="Contraseña:"/></td>
+                    <td>
+                        <h:inputSecret id="contraseña" value="#{registroClienteBean.contraseña}" required="true"
+                                       requiredMessage="⚠️ Ingresa tu contraseña" styleClass="input"/>
+                        <h:message for="contraseña" styleClass="mensaje-error"/>
+                    </td>
+                </tr>
+            </table>
+
+            <br/>
+            <h:commandButton value="Registrar" action="#{registroClienteBean.registrar}" styleClass="boton"/>
+            <br/><br/>
+            <div style="text-align: center;">
+                <h:link outcome="login_cliente.xhtml" value="¿Ya tienes cuenta? Inicia Sesión" styleClass="boton-secundario"/>
+            </div>
+        </h:form>
+    </div>
+</h:body>
+</html>
+
+

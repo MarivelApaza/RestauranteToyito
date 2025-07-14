@@ -1,0 +1,45 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28/06/2025, 05:34:23 PM
+    Author     : Windows
+*/
+
+/* Estructura principal */
+/* superior.css */
+body {
+    background-image: url("#{resource['images/logotoyito.png']}");
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    background-color: #2c2c2c;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-container {
+    display: flex;
+    height: calc(100vh - 60px); /* descontando navbar */
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #2c2c2c;
+    color: white;
+    padding: 20px;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+    background-color: #f4f4f4;
+}
+

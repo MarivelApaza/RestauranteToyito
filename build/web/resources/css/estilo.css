@@ -1,0 +1,102 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27/06/2025, 10:26:15 PM
+    Author     : Windows
+*/
+
+body {
+    background-image: url("#{resource['images/FONDO01.jpg']}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    background-color: #E2C5C5;
+    padding: 40px;
+    margin: 100px auto;
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #000;
+}
+
+.logo {
+    width: 190px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 400;
+    color: black;
+    margin-top: 10px;
+}
+
+.boton {
+    background-color: #D0B159;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #e65c00;
+}
+
+.opciones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.opcion-boton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E9E3CF;
+    color: #D0B159;
+    border: 2px solid #D0B159;
+    border-radius: 10px;
+    padding: 10px;
+    width: 180px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.opcion-boton:hover {
+    background-color: #D0B159;
+    color: white;
+    transform: scale(1.05);
+}
+
+.opcion-icono {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
